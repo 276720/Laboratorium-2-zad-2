@@ -55,8 +55,12 @@ public class SimpleNotepad extends JFrame{
     }
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            //new SimpleNotepad().setVisible(true);
-            new SimpleNotepad();
+            try{
+                SimpleNotepad test = new SimpleNotepad();
+                test.setVisible(true);
+            } catch (Exception e ){
+                e.printStackTrace(System.err);
+            }
         });
     }
 }
